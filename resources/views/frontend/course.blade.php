@@ -11,7 +11,7 @@
         <div class="card-body">
             <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="{{ $course['video'] }}?rel=0?control=1"
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $course['video'] }}?rel=0?control=1"
                         allowfullscreen></iframe>
                 </div>
             </div>
