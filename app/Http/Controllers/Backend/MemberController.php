@@ -19,6 +19,10 @@ class MemberController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name'      => 'required',
+            'email'     => 'required|email',
+        ]);
         Member::create($request->all());
 
         return redirect()->back()->withSuccess('Task Created Successfully!');
