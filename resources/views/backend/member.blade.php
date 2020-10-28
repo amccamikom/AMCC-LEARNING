@@ -14,6 +14,13 @@
             <button type="button" data-toggle="modal" data-target="#modal-form" class="btn btn-primary btn-sm"> +
                 course </button>
         </div>
+        
+        @if($errors->any())
+        <div class="alert alert-danger">
+            {{ implode('', $errors->all(':message')) }}
+        </div>
+      @endif
+        
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="member-table">
