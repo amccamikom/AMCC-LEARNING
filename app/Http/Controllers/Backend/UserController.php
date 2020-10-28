@@ -20,6 +20,11 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name'      => 'required',
+            'email'      => 'required|email',
+            'password'  => 'required|min:6'
+        ]);
         User::create($request->all());
 
         return redirect()->back()->withSuccess('Task Created Successfully!');
