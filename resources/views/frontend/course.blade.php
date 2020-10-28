@@ -28,6 +28,18 @@
                                 href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2"
                                 aria-selected="false">Attachment</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab"
+                                href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2"
+                                aria-selected="false">About</a>
+                        </li>
+                        
+                         <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab"
+                                href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2"
+                                aria-selected="false">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-content" id="myTabContent">
