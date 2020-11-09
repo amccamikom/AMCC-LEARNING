@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Course;
-use App\Product;
+use App\Models\Course;
+use App\Models\Product;
 use App\Http\Controllers\Controller;
 
 class CourseController extends Controller

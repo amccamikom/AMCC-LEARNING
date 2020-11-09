@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Information;
+use App\Models\Information;
 use Illuminate\Http\Request;
 
 class InformationController extends Controller

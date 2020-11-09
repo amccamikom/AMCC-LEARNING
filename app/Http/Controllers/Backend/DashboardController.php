@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Product;
-use App\Feedback;
+use App\Models\Product;
+use App\Models\Feedback;
 use App\Http\Controllers\Controller;
-use App\Member;
+use App\Models\Member;
 
 class DashboardController extends Controller
 {

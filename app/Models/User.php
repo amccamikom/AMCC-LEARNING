@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Member extends Authenticatable
+class User extends Authenticatable
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class Member extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'secret',
+        'name', 'email', 'password',
     ];
 
     /**
@@ -25,15 +25,20 @@ class Member extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'secret', 'remember_token',
+        'password', 'remember_token',
     ];
 
-    protected static function boot()
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    public function setPasswordAttribute($value)
     {
-        parent::boot();
-        static::saving(function ($model) {
-            $model->secret = md5($model->email);
-            $model->remember_token = md5($model->name);
-        });
+        $this->attributes['password'] = password_hash($value, PASSWORD_DEFAULT);
     }
 }

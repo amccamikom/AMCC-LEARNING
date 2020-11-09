@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Member;
+use App\Models\Models\Member;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
