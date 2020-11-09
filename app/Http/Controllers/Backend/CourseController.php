@@ -9,6 +9,12 @@ use App\Http\Controllers\Controller;
 
 class CourseController extends Controller
 {
+    /**
+     * Method to get all Course and display it within datatables
+     *
+     * @param Product $product
+     * @return void
+     */
     public function index(Product $product)
     {
         if(request()->wantsJson()){
@@ -40,6 +46,13 @@ class CourseController extends Controller
         return view('backend.course', compact('product'));
     }
 
+    /**
+     * method for storing course
+     *
+     * @param Product $product
+     * @param Request $request
+     * @return void
+     */
     public function store(Product $product, Request $request)
     {
         $product->courses()->create($request->all());
@@ -47,6 +60,13 @@ class CourseController extends Controller
         return redirect()->back();
     }
 
+    /**
+     * Method For Delete course
+     *
+     * @param Product $product
+     * @param Course $course
+     * @return void
+     */
     public function destroy(Product $product, Course $course)
     {
         $course->delete();

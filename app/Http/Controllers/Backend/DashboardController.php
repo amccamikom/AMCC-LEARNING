@@ -9,6 +9,11 @@ use App\Models\Member;
 
 class DashboardController extends Controller
 {
+    /**
+     * method for counting summary
+     *
+     * @return void
+     */
     public function index()
     {
         $product = Product::count();

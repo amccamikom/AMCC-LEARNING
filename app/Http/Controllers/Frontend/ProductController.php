@@ -7,6 +7,11 @@ use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
+    /**
+     * Method for get all product
+     *
+     * @return void
+     */
     public function index()
     {
         $product = Product::all();
