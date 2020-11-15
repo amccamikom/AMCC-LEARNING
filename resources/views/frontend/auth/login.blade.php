@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-block my-4">{{ __('Login') }}</button>
+                            <button onClick="Check()" type="submit" class="btn btn-primary btn-block my-4">{{ __('Login') }}</button>
                         </div>
                     </form>
                 </div>

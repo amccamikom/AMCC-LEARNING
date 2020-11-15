@@ -1,8 +1,8 @@
 <?php
 
-use App\Information;
-use App\Member;
-use App\User;
+use App\Models\Information;
+use App\Models\Member;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

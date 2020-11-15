@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Feedback;
+use App\Models\Feedback;
 use App\Http\Controllers\Controller;
 
 class FeedbackController extends Controller
 {
+    /**
+     * Method For get all feedback with newest filter
+     *
+     * @return void
+     */
     public function index()
     {
         if(request()->wantsJson()){

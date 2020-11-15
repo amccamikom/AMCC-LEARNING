@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    /**
+     * Method for get all newest user and display within datatables
+     *
+     * @return void
+     */
     public function index()
     {
         if(request()->wantsJson()){
@@ -18,6 +23,12 @@ class UserController extends Controller
         return view('backend.user');
     }
 
+    /**
+     * Method For Create User
+     *
+     * @param Request $request
+     * @return void
+     */
     public function store(Request $request)
     {
         $request->validate([
